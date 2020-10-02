@@ -78,7 +78,7 @@ auto X11KioskWindowManagerPolicy::place_new_window(ApplicationInfo const& app_in
     if ((specification.type() == mir_window_type_normal || specification.type() == mir_window_type_freestyle) &&
         (!specification.parent().is_set() || !specification.parent().value().lock()))
     {
-        specification.state() = mir_window_state_maximized;
+        specification.state() = mir_window_state_fullscreen;
         specification.size() = mir::optional_value<Size>{}; // Ignore requested size (if any) when we maximize
         tools.place_and_size_for_state(specification, WindowInfo{});
 
