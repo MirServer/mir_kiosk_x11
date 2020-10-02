@@ -16,3 +16,7 @@ target_link_libraries(mir_kiosk_x11 ${MIRAL_LDFLAGS})
 install(PROGRAMS ${CMAKE_BINARY_DIR}/mir_kiosk_x11
     DESTINATION ${CMAKE_INSTALL_PREFIX}/bin
 )
+
+add_custom_target(x11_kiosk_launch ALL
+        cp ${CMAKE_CURRENT_SOURCE_DIR}/x11_kiosk_launch.sh ${CMAKE_BINARY_DIR}/x11_kiosk_launch
+)
