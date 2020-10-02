@@ -13,7 +13,7 @@ add_executable(mir_kiosk_x11
 target_include_directories(mir_kiosk_x11 PUBLIC SYSTEM ${MIRAL_INCLUDE_DIRS})
 target_link_libraries(mir_kiosk_x11 ${MIRAL_LDFLAGS})
 
-install(PROGRAMS ${CMAKE_BINARY_DIR}/mir_kiosk_x11
+install(PROGRAMS ${CMAKE_BINARY_DIR}/mir_kiosk_x11 ${CMAKE_BINARY_DIR}/x11_kiosk_launch
     DESTINATION ${CMAKE_INSTALL_PREFIX}/bin
 )
 
