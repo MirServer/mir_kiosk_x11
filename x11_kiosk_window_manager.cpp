@@ -96,7 +96,7 @@ void X11KioskWindowManagerPolicy::handle_modify_window(WindowInfo& window_info, 
     if ((window_info.type() == mir_window_type_normal || window_info.type() == mir_window_type_freestyle) &&
         !window_info.parent())
     {
-        specification.state() = mir_window_state_maximized;
+        specification.state() = mir_window_state_fullscreen;
         specification.size() = mir::optional_value<Size>{}; // Ignore requested size (if any) when we maximize
         tools.place_and_size_for_state(specification, window_info);
 
