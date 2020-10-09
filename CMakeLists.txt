@@ -1,8 +1,8 @@
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.10)
 project(mir_kiosk_x11)
 include(FindPkgConfig)
 
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 17)
 pkg_check_modules(MIRAL miral REQUIRED)
 
 add_executable(mir_kiosk_x11
